@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - PrepX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <!-- Logo -->
+          <div class="logo">
+            <a href="../landing/index.html" class="logo-link">
+              <div class="logo-icon">
+                <span>P</span>
+              </div>
+              <span class="logo-text">Prepx</span>
+            </a>
+          </div>
+
+          <!-- Navigation -->
+          <nav class="nav" id="primaryNav">
+            <a href="../modules/module.html" class="nav-item">Modules</a>
+            <a href="../landing/index.html#solutions" class="nav-item"
+              >Solutions</a
+            >
+            <a href="../landing/index.html#footer" class="nav-item"
+              >Resources</a
+            >
+            <a href="../about us/aboutus.html" class="nav-item">About Us</a>
+          </nav>
+
+          <!-- Mobile Menu Toggle -->
+          <button
+            class="mobile-menu-toggle"
+            id="mobileMenuToggle"
+            aria-label="Toggle mobile menu"
+          >
+            <svg
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+
+          <!-- Auth Buttons -->
+          <div class="header-buttons">
+            <div class="student-access">
+              <span>Student Access</span>
+              <button class="access-btn">
+                <svg
+                  width="16"
+                  height="16"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="auth-buttons">
+              <a href="../login/login.html" class="btn btn-ghost">Log In</a>
+              <button class="btn btn-cta" id="getStartedBtn">
+                Get Started
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-container">
+          <div class="contact-header">
+            <h2 class="section-title">Send us a Message</h2>
+            <p class="section-description">
+              Fill out the form below and we'll get back to you as soon as
+              possible. Whether you have questions about specific exams, need
+              technical support, or want to provide feedback, we're here to
+              help.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-form">
+              <h3>Your Message</h3>
+              <form id="contactForm">
+                <div class="form-grid">
+                  <div class="form-field">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="subject">Query Type *</label>
+                    <select id="subject" name="subject" required>
+                      <option value="">Select a topic</option>
+                      <option value="exam-query">Exam Information</option>
+                      <option value="website-issue">Website Issues</option>
+                      <option value="account-support">Account Support</option>
+                      <option value="technical-help">Technical Help</option>
+                      <option value="course-inquiry">Course Inquiry</option>
+                      <option value="billing">Billing & Payments</option>
+                      <option value="feedback">Feedback & Suggestions</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+
+                  <div class="form-field">
+                    <label for="exam">Specific Exam (if applicable)</label>
+                    <input
+                      type="text"
+                      id="exam"
+                      name="exam"
+                      placeholder="e.g., SAT, GRE, GMAT, JEE, NEET"
+                    />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="priority">Priority Level</label>
+                    <select id="priority" name="priority">
+                      <option value="low">Low - General Inquiry</option>
+                      <option value="medium" selected>
+                        Medium - Standard Support
+                      </option>
+                      <option value="high">High - Urgent Issue</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-field full-width">
+                  <label for="message">Your Message *</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Please describe your query in detail. Include any relevant information that will help us assist you better..."
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                  Send Message
+                </button>
+
+                <div class="success-message" id="successMessage">
+                  ✅ Thank you for your message! We'll get back to you within 24
+                  hours.
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="faq-container">
+          <div class="faq-header">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-description">
+              Find quick answers to common questions about Prepx and our
+              services.
+            </p>
+          </div>
+
+          <div class="faq-grid">
+            <div class="faq-item">
+              <h3>How can I get exam-specific study materials?</h3>
+              <p>
+                Browse our exam categories or contact us with your specific exam
+                name. We provide tailored resources for most competitive exams
+                including JEE, NEET, SAT, GRE, GMAT, and more.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Is there technical support available?</h3>
+              <p>
+                Yes! Our technical team is available to help with website
+                issues, login problems, platform navigation, and any other
+                technical difficulties you may encounter.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Can I suggest new features or exams?</h3>
+              <p>
+                Absolutely! We value user feedback and actively work on
+                improving our platform. Use the contact form to suggest new
+                features, exams, or improvements.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>How quickly will I receive a response?</h3>
+              <p>
+                We typically respond within 2-4 hours during business hours (9
+                AM - 6 PM EST), and within 24 hours for all other times. Urgent
+                technical issues are prioritized.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+      <div class="container">
+        <!-- Footer Links -->
+        <div class="footer-content">
+          <div class="footer-column">
+            <div class="footer-logo">
+              <div class="logo-icon">
+                <span>P</span>
+              </div>
+              <span class="logo-text">Prepx</span>
+            </div>
+            <p class="footer-description">
+              The most trusted online examination platform for educational
+              institutions worldwide.
+            </p>
+            <div class="social-links">
+              <a
+                href="#"
+                class="social-link"
+                aria-label="Visit our Facebook"
+                rel="nofollow noopener"
+                >f</a
+              >
+              <a
+                href="#"
+                class="social-link"
+                aria-label="Visit our Twitter"
+                rel="nofollow noopener"
+                >t</a
+              >
+              <a
+                href="#"
+                class="social-link"
+                aria-label="Visit our LinkedIn"
+                rel="nofollow noopener"
+                >in</a
+              >
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h3>Product</h3>
+            <ul>
+              <li><a href="../modules/module.html">Modules</a></li>
+              <li><a href="../about us/aboutus.html">About Us</a></li>
+              <li><a href="#security">Security</a></li>
+              <li><a href="#integrations">Integrations</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Solutions</h3>
+            <ul>
+              <li><a href="#">Schools</a></li>
+              <li><a href="#">Universities</a></li>
+              <li><a href="#">Corporate Training</a></li>
+              <li><a href="#">Certification</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="../about us/aboutus.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Documentation</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+          <p>&copy; 2025 Prepx. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="../login/login.html">Log In</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="contact.js"></script>
+  </body>
+</html>

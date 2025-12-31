@@ -1,0 +1,434 @@
+/* CSS Variables for Design System */
+:root {
+    --exam-bg: hsl(220, 26%, 8%);
+    --exam-card: hsl(220, 28%, 10%);
+    --exam-border: hsl(220, 28%, 18%);
+    --exam-accent: hsl(265, 83%, 57%);
+    --exam-text-primary: hsl(210, 40%, 98%);
+    --exam-text-secondary: hsl(215, 20.2%, 65.1%);
+    --secondary: hsl(220, 28%, 15%);
+    --gradient-primary: linear-gradient(135deg, hsl(265, 83%, 57%), hsl(280, 83%, 65%));
+    --shadow-glow: 0 0 20px hsl(265, 83%, 57%, 0.3);
+    --shadow-card: 0 4px 20px hsl(220, 26%, 5%, 0.5);
+    --purple-600: hsl(270, 91%, 65%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--exam-bg);
+    color: var(--exam-text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+.exam-header {
+    background-color: var(--exam-card);
+    border-bottom: 1px solid var(--exam-border);
+}
+
+.header-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 0;
+}
+
+.logo-container {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--exam-accent), var(--purple-600));
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-text {
+    color: var(--exam-text-primary);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.platform-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--exam-text-primary);
+    margin: 0;
+}
+
+.exam-subtitle {
+    color: var(--exam-text-secondary);
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Main Layout */
+.main-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 32px;
+}
+
+/* Instructions Section */
+.instructions-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.instructions-card {
+    background-color: var(--exam-card);
+    border: 1px solid var(--exam-border);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: var(--shadow-card);
+}
+
+.instructions-header {
+    margin-bottom: 24px;
+}
+
+.instructions-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--exam-text-primary);
+    margin-bottom: 16px;
+}
+
+.important-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background-color: hsl(265, 83%, 57%, 0.1);
+    border: 1px solid var(--exam-accent);
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.alert-icon {
+    width: 20px;
+    height: 20px;
+    color: var(--exam-accent);
+    flex-shrink: 0;
+}
+
+.notice-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--exam-accent);
+    margin-bottom: 4px;
+}
+
+.notice-text {
+    font-size: 14px;
+    color: var(--exam-text-secondary);
+    margin: 0;
+}
+
+.instructions-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.instruction-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--exam-text-primary);
+}
+
+.instruction-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.instruction-list li {
+    position: relative;
+    padding-left: 20px;
+    color: var(--exam-text-secondary);
+    font-size: 14px;
+}
+
+.instruction-list li:before {
+    content: "•";
+    color: var(--exam-accent);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Student Form Section */
+.form-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.student-form-container {
+    background-color: var(--exam-card);
+    border: 1px solid var(--exam-border);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: var(--shadow-card);
+}
+
+.student-form-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--exam-text-primary);
+    margin-bottom: 24px;
+}
+
+.student-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-label {
+    color: var(--exam-text-secondary);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.form-input {
+    background-color: var(--secondary);
+    border: 1px solid var(--exam-border);
+    color: var(--exam-text-primary);
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--exam-accent);
+    box-shadow: 0 0 0 2px hsla(265, 83%, 57%, 0.2);
+}
+
+.form-input::placeholder {
+    color: var(--exam-text-secondary);
+}
+
+.group-selection {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+}
+
+.group-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid var(--exam-border);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.group-item:hover {
+    border-color: var(--exam-accent);
+}
+
+.group-item:has(.group-checkbox:checked) {
+    background-color: hsla(265, 83%, 57%, 0.1);
+    border-color: var(--exam-accent);
+}
+
+.group-checkbox {
+    accent-color: var(--exam-accent);
+    margin: 0;
+}
+
+.group-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--exam-text-secondary);
+}
+
+.group-item:has(.group-checkbox:checked) .group-label {
+    color: var(--exam-accent);
+}
+
+.submit-button {
+    width: 100%;
+    background: var(--gradient-primary);
+    color: var(--exam-text-primary);
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px hsla(265, 83%, 57%, 0.3);
+}
+
+.submit-button:hover {
+    background: linear-gradient(135deg, hsla(265, 83%, 57%, 0.9), hsla(280, 83%, 65%, 0.9));
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px hsla(265, 83%, 57%, 0.4);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .main-container {
+        padding: 24px 16px;
+    }
+    
+    .header-container {
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 640px) {
+    .group-selection {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .instructions-card,
+    .student-form-container {
+        padding: 16px;
+    }
+    
+    .platform-title {
+        font-size: 24px;
+    }
+    
+    .instructions-title,
+    .student-form-header h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .group-selection {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .header-content {
+        gap: 8px;
+    }
+    
+    .logo-container {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .logo-text {
+        font-size: 16px;
+    }
+}
+
+/* ===========================================================
+   Exam Page — Validation & Interaction Enhancements
+   (matches the rewritten exam.js)
+   =========================================================== */
+
+/* 🟥 1. Inline field error state */
+.form-field.error .form-input {
+  border-color: hsl(0, 80%, 60%);
+  box-shadow: 0 0 0 2px hsla(0, 80%, 60%, 0.15);
+}
+
+.field-error {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.3;
+  color: hsl(0, 80%, 70%);
+}
+
+/* 🟧 2. Group validation text */
+.group-error {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: hsl(0, 80%, 70%);
+}
+
+/* 🟨 3. Acknowledge checkbox and its prompt */
+.ack-checkbox {
+  accent-color: var(--exam-accent);
+}
+.ack-error {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: hsl(0, 80%, 70%);
+}
+
+/* 🟩 4. Disabled button appearance */
+.submit-button[aria-disabled="true"],
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+  filter: grayscale(0.2);
+}
+
+/* 🟦 5. Focus ring for keyboard users */
+.student-form :where(input, button, select, textarea):focus-visible {
+  outline: none;
+  border-color: var(--exam-accent);
+  box-shadow: 0 0 0 2px hsla(265, 83%, 57%, 0.25);
+}
+
+/* 🟪 6. Subtle animation for error visibility (optional) */
+@keyframes shake {
+  10%, 90% { transform: translateX(-1px); }
+  20%, 80% { transform: translateX(2px); }
+  30%, 50%, 70% { transform: translateX(-4px); }
+  40%, 60% { transform: translateX(4px); }
+}
+.form-field.error .form-input {
+  animation: shake 0.25s ease;
+}
+
+/* Respect accessibility preferences */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}

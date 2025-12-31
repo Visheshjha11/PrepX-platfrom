@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrepX - Module</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="module.css" />
+  </head>
+  <body>
+    <a href="#mainContent" class="skip-link"> </a>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <!-- Logo -->
+          <div class="logo">
+            <a href="../landing/index.html" class="logo-link">
+              <div class="logo-icon">
+                <span>P</span>
+              </div>
+              <span class="logo-text">Prepx</span>
+            </a>
+          </div>
+
+          <!-- Mobile Menu Toggle -->
+          <label for="mobile-menu-toggle" class="mobile-menu-toggle">
+            <svg
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </label>
+          <input
+            type="checkbox"
+            id="mobile-menu-toggle"
+            class="mobile-menu-checkbox"
+          />
+
+          <!-- Navigation -->
+          <nav class="nav" id="primaryNav">
+            <a href="module.html" class="nav-item active">Modules</a>
+            <a href="../landing/index.html#solutions" class="nav-item"
+              >Solutions</a
+            >
+            <a href="../landing/index.html#footer" class="nav-item"
+              >Resources</a
+            >
+            <a href="../about us/aboutus.html" class="nav-item">About Us</a>
+          </nav>
+
+          <!-- Auth Buttons -->
+          <div class="header-buttons">
+            <div class="student-access">
+              <span>Student Access</span>
+              <button class="access-btn">
+                <svg
+                  width="16"
+                  height="16"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="auth-buttons">
+              <a href="../login/login.html" class="btn btn-ghost">Log In</a>
+              <button class="btn btn-cta" id="getStartedBtn">
+                Get Started
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="container">
+        <!-- Search and Filter Controls -->
+        <div class="search-controls">
+          <div class="search-bar">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search courses..."
+            />
+            <svg
+              class="search-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </div>
+
+          <div class="filter-controls">
+            <div class="filter-group">
+              <label for="categoryFilter">Category:</label>
+              <select id="categoryFilter">
+                <option value="">All Categories</option>
+                <option value="programming">Programming</option>
+                <option value="mathematics">Mathematics</option>
+                <option value="engineering">Engineering</option>
+                <option value="web-development">Web Development</option>
+                <option value="data-science">Data Science</option>
+                <option value="security">Security</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="sortBy">Sort by:</label>
+              <select id="sortBy">
+                <option value="default">Default</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="chapters-low">Chapters: Low to High</option>
+                <option value="chapters-high">Chapters: High to Low</option>
+                <option value="name">Name: A to Z</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="priceRange"
+                >Price Range: ₹<span id="priceValue">0</span></label
+              >
+              <input
+                type="range"
+                id="priceRange"
+                min="0"
+                max="1500"
+                value="1500"
+              />
+            </div>
+
+            <button id="clearFilters" class="btn btn-ghost">
+              Clear Filters
+            </button>
+          </div>
+        </div>
+
+        <div class="courses-grid" id="coursesGrid">
+          <!-- Course Card 1 - C Programming -->
+          <div
+            class="course-card"
+            data-category="web-development"
+            data-price="0"
+            data-chapters="11"
+            data-name="Front End Engineering"
+          >
+            <div class="course-header blue-gradient">
+              <div class="course-icon">💻</div>
+              <div class="course-title">
+                <h3>Front End Engineering</h3>
+                <div class="category-tag">Web Development</div>
+              </div>
+            </div>
+            <div class="course-content">
+              <p class="course-description">
+                Master the art of building interactive, responsive, and visually
+                stunning websites with HTML, CSS, JavaScript, and modern
+                frameworks for dynamic and engaging user experiences.
+              </p>
+              <div class="course-meta">
+                <div class="course-info">
+                  <svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M2 3h6l2 4h8V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3z"
+                    ></path>
+                  </svg>
+                  <span>11 Chapters</span>
+                </div>
+                <div class="course-price">Free</div>
+              </div>
+              <button class="btn btn-success">Access Course</button>
+            </div>
+          </div>
+
+          <!-- Course Card 2 - Java -->
+          <div
+            class="course-card"
+            data-category="programming"
+            data-price="249"
+            data-chapters="2"
+            data-name="Core Java Programming"
+          >
+            <div class="course-header teal-gradient">
+              <div class="course-icon">☕</div>
+              <div class="course-title">
+                <h3>Core Java Programming</h3>
+                <span class="premium-badge">Premium</span>
+              </div>
+            </div>
+            <div class="course-content">
+              <p class="course-description">
+                Dive into the fundamentals of Java programming with this
+                beginner-friendly course. Learn essential concepts like OOP,
+                inheritance, polymorphism, and more.
+              </p>
+              <div class="course-meta">
+                <div class="course-info">
+                  <svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M2 3h6l2 4h8V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3z"
+                    ></path>
+                  </svg>
+                  <span>2 Chapters</span>
+                </div>
+                <div class="course-price">₹249</div>
+              </div>
+              <button class="btn btn-primary">See Details</button>
+            </div>
+          </div>
+
+          <!-- Course Card 3 - DSA -->
+          <div
+            class="course-card"
+            data-category="engineering"
+            data-price="150"
+            data-chapters="59"
+            data-name="Object Oriented Software Engineering"
+          >
+            <div class="course-header purple-gradient">
+              <div class="course-icon">💻</div>
+              <div class="course-title">
+                <h3>Object Oriented Software Engineering</h3>
+                <span class="premium-badge">Premium</span>
+              </div>
+            </div>
+            <div class="course-content">
+              <p class="course-description">
+                Explore the principles of object-oriented software engineering,
+                from requirements and design to testing and maintenance using
+                real-world methodologies.
+              </p>
+              <div class="course-meta">
+                <div class="course-info">
+                  <svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M2 3h6l2 4h8V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3z"
+                    ></path>
+                  </svg>
+                  <span>59 Chapters</span>
+                </div>
+                <div class="course-price">₹150</div>
+              </div>
+              <button class="btn btn-primary">See Details</button>
+            </div>
+          </div>
+
+          <!-- Course Card 4 - C++ OOP -->
+          <div
+            class="course-card"
+            data-category="programming"
+            data-price="349"
+            data-chapters="25"
+            data-name="Object Oriented Programming using C++"
+          >
+            <div class="course-header cyan-gradient">
+              <div class="course-icon">C++</div>
+              <div class="course-title">
+                <h3>Object Oriented Programming using C++</h3>
+                <span class="premium-badge">Premium</span>
+              </div>
+            </div>
+            <div class="course-content">
+              <p class="course-description">
+                Master the principles of Object-Oriented Programming using C++.
+                Learn about classes, objects, inheritance, polymorphism, and
+                advanced OOP concepts.
+              </p>
+              <div class="course-meta">
+                <div class="course-info">
+                  <svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M2 3h6l2 4h8V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3z"
+                    ></path>
+                  </svg>
+                  <span>25 Chapters</span>
+                </div>
+                <div class="course-price">₹349</div>
+              </div>
+              <button class="btn btn-primary">See Details</button>
+            </div>
+          </div>
+
+          <!-- Course Card 5 - DSA with C++ -->
+          <div
+            class="course-card"
+            data-category="data-science"
+            data-price="1299"
+            data-chapters="45"
+            data-name="Database Management System"
+          >
+            <div class="course-header purple-gradient">
+              <div class="course-icon">🔧</div>
+              <div class="course-title">
+                <h3>Database Management System</h3>
+                <span class="premium-badge">Premium</span>
+              </div>
+            </div>
+            <div class="course-content">
+              <p class="course-description">
+                Learn the fundamentals of Database Management Systems including
+                data models, SQL, normalization, transactions, and query
+                optimization.
+              </p>
+              <div class="course-meta">
+                <div class="course-info">
+                  <svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M2 3h6l2 4h8V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3z"
+                    ></path>
+                  </svg>
+                  <span>45 Chapters</span>
+                </div>
+                <div class="course-price">₹1299</div>
+              </div>
+              <button class="btn btn-primary">See Details</button>
+            </div>
+          </div>
+
+          <!-- Course Card 6 - React -->
+          <div
+            class="course-card"
+            data-category="web-development"
+            data-price="599"
+            data-chapters="35"
+            data-name="React Development"
+          >
+            <div class="course-header green-gradient">
+              <div class="course-icon">⚛️</div>
+              <div class="course-title">
+                <h3>React Development</h3>
+                <span class="premium-badge">Premium</span>
+              </div>
+            </div>
+            <div class="course-content">
+              <p class="course-description">
+                Master React.js from fundamentals to advanced concepts including
+                hooks, state management, routing, and building scalable
+                applications with modern React patterns.
+              </p>
+              <div class="course-meta">
+                <div class="course-info">
+                  <svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M2 3h6l2 4h8V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3z"
+                    ></path>
+                  </svg>
+                  <span>35 Chapters</span>
+                </div>
+                <div class="course-price">₹599</div>
+              </div>
+              <button class="btn btn-primary">See Details</button>
+            </div>
+          </div>
+
+          <!-- Course Card 7 - Python -->
+          <div
+            class="course-card"
+            data-category="programming"
+            data-price="449"
+            data-chapters="42"
+            data-name="Python Programming"
+          >
+            <div class="course-header orange-gradient">
+              <div class="course-icon">🐍</div>
+              <div class="course-title">
+                <h3>Python Programming</h3>
+                <span class="premium-badge">Premium</span>
+              </div>
+            </div>
+            <div class="course-content">
+              <p class="course-description">
+                Learn Python programming from basics to advanced topics
+                including data structures, algorithms, web development, data
+                science, and machine learning applications.
+              </p>
+              <div class="course-meta">
+                <div class="course-info">
+                  <svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M2 3h6l2 4h8V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3z"
+                    ></path>
+                  </svg>
+                  <span>42 Chapters</span>
+                </div>
+                <div class="course-price">₹449</div>
+              </div>
+              <button class="btn btn-primary">See Details</button>
+            </div>
+          </div>
+
+          <!-- Course Card 8 - Calculus -->
+          <div
+            class="course-card"
+            data-category="mathematics"
+            data-price="299"
+            data-chapters="28"
+            data-name="Calculus"
+          >
+            <div class="course-header red-gradient">
+              <div class="course-icon">∫</div>
+              <div class="course-title">
+                <h3>Calculus</h3>
+                <span class="premium-badge">Premium</span>
+              </div>
+            </div>
+            <div class="course-content">
+              <p class="course-description">
+                Master differential and integral calculus with comprehensive
+                coverage of limits, derivatives, integrals, and their
+                applications in engineering and science.
+              </p>
+              <div class="course-meta">
+                <div class="course-info">
+                  <svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M2 3h6l2 4h8V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3z"
+                    ></path>
+                  </svg>
+                  <span>28 Chapters</span>
+                </div>
+                <div class="course-price">₹299</div>
+              </div>
+              <button class="btn btn-primary">See Details</button>
+            </div>
+          </div>
+
+          <!-- Course Card 9 - OOPs -->
+          <div
+            class="course-card"
+            data-category="programming"
+            data-price="399"
+            data-chapters="18"
+            data-name="Object-Oriented Programming"
+          >
+            <div class="course-header indigo-gradient">
+              <div class="course-icon">🏗️</div>
+              <div class="course-title">
+                <h3>Object-Oriented Programming</h3>
+                <span class="premium-badge">Premium</span>
+              </div>
+            </div>
+            <div class="course-content">
+              <p class="course-description">
+                Learn Object-Oriented Programming principles including
+                encapsulation, inheritance, polymorphism, and abstraction with
+                practical examples and real-world applications.
+              </p>
+              <div class="course-meta">
+                <div class="course-info">
+                  <svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M2 3h6l2 4h8V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3z"
+                    ></path>
+                  </svg>
+                  <span>18 Chapters</span>
+                </div>
+                <div class="course-price">₹399</div>
+              </div>
+              <button class="btn btn-primary">See Details</button>
+            </div>
+          </div>
+
+          <!-- Course Card 10 - OOSE -->
+          <div
+            class="course-card"
+            data-category="engineering"
+            data-price="799"
+            data-chapters="32"
+            data-name="Object-Oriented Software Engineering"
+          >
+            <div class="course-header pink-gradient">
+              <div class="course-icon">🔧</div>
+              <div class="course-title">
+                <h3>Object-Oriented Software Engineering</h3>
+                <span class="premium-badge">Premium</span>
+              </div>
+            </div>
+            <div class="course-content">
+              <p class="course-description">
+                Advanced software engineering concepts focusing on
+                object-oriented design patterns, UML modeling, software
+                architecture, and large-scale system development methodologies.
+              </p>
+              <div class="course-meta">
+                <div class="course-info">
+                  <svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M2 3h6l2 4h8V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3z"
+                    ></path>
+                  </svg>
+                  <span>32 Chapters</span>
+                </div>
+                <div class="course-price">₹799</div>
+              </div>
+              <button class="btn btn-primary">See Details</button>
+            </div>
+          </div>
+
+          <!-- Course Card 11 - Computer Networking -->
+          <div
+            class="course-card"
+            data-category="engineering"
+            data-price="549"
+            data-chapters="38"
+            data-name="Computer Networking"
+          >
+            <div class="course-header yellow-gradient">
+              <div class="course-icon">🌐</div>
+              <div class="course-title">
+                <h3>Computer Networking</h3>
+                <span class="premium-badge">Premium</span>
+              </div>
+            </div>
+            <div class="course-content">
+              <p class="course-description">
+                Comprehensive study of computer networks including OSI model,
+                TCP/IP protocols, network security, routing algorithms, and
+                modern networking technologies.
+              </p>
+              <div class="course-meta">
+                <div class="course-info">
+                  <svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M2 3h6l2 4h8V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3z"
+                    ></path>
+                  </svg>
+                  <span>38 Chapters</span>
+                </div>
+                <div class="course-price">₹549</div>
+              </div>
+              <button class="btn btn-primary">See Details</button>
+            </div>
+          </div>
+
+          <!-- Course Card 12 - Data Structures -->
+          <div
+            class="course-card"
+            data-category="programming"
+            data-price="699"
+            data-chapters="52"
+            data-name="Data Structures & Algorithms"
+          >
+            <div class="course-header emerald-gradient">
+              <div class="course-icon">📊</div>
+              <div class="course-title">
+                <h3>Data Structures & Algorithms</h3>
+                <span class="premium-badge">Premium</span>
+              </div>
+            </div>
+            <div class="course-content">
+              <p class="course-description">
+                Master fundamental data structures and algorithms including
+                arrays, linked lists, trees, graphs, sorting, searching, and
+                dynamic programming with hands-on practice.
+              </p>
+              <div class="course-meta">
+                <div class="course-info">
+                  <svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M2 3h6l2 4h8V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3z"
+                    ></path>
+                  </svg>
+                  <span>52 Chapters</span>
+                </div>
+                <div class="course-price">₹699</div>
+              </div>
+              <button class="btn btn-primary">See Details</button>
+            </div>
+          </div>
+
+          <!-- Course Card 13 - Machine Learning -->
+          <div
+            class="course-card"
+            data-category="data-science"
+            data-price="999"
+            data-chapters="48"
+            data-name="Machine Learning"
+          >
+            <div class="course-header violet-gradient">
+              <div class="course-icon">🤖</div>
+              <div class="course-title">
+                <h3>Machine Learning</h3>
+                <span class="premium-badge">Premium</span>
+              </div>
+            </div>
+            <div class="course-content">
+              <p class="course-description">
+                Learn machine learning algorithms, neural networks, deep
+                learning, and AI applications with practical projects and
+                real-world datasets.
+              </p>
+              <div class="course-meta">
+                <div class="course-info">
+                  <svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M2 3h6l2 4h8V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3z"
+                    ></path>
+                  </svg>
+                  <span>48 Chapters</span>
+                </div>
+                <div class="course-price">₹999</div>
+              </div>
+              <button class="btn btn-primary">See Details</button>
+            </div>
+          </div>
+
+          <!-- Course Card 14 - Web Development -->
+          <div
+            class="course-card"
+            data-category="web-development"
+            data-price="1299"
+            data-chapters="65"
+            data-name="Full Stack Web Development"
+          >
+            <div class="course-header sky-gradient">
+              <div class="course-icon">🌐</div>
+              <div class="course-title">
+                <h3>Full Stack Web Development</h3>
+                <span class="premium-badge">Premium</span>
+              </div>
+            </div>
+            <div class="course-content">
+              <p class="course-description">
+                Complete full-stack web development course covering frontend
+                technologies, backend development, databases, deployment, and
+                modern web frameworks.
+              </p>
+              <div class="course-meta">
+                <div class="course-info">
+                  <svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M2 3h6l2 4h8V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3z"
+                    ></path>
+                  </svg>
+                  <span>65 Chapters</span>
+                </div>
+                <div class="course-price">₹1299</div>
+              </div>
+              <button class="btn btn-primary">See Details</button>
+            </div>
+          </div>
+
+          <!-- Course Card 15 - Cybersecurity -->
+          <div
+            class="course-card"
+            data-category="security"
+            data-price="899"
+            data-chapters="41"
+            data-name="Cybersecurity Fundamentals"
+          >
+            <div class="course-header rose-gradient">
+              <div class="course-icon">🔒</div>
+              <div class="course-title">
+                <h3>Cybersecurity Fundamentals</h3>
+                <span class="premium-badge">Premium</span>
+              </div>
+            </div>
+            <div class="course-content">
+              <p class="course-description">
+                Learn cybersecurity essentials including network security,
+                cryptography, ethical hacking, vulnerability assessment, and
+                security best practices.
+              </p>
+              <div class="course-meta">
+                <div class="course-info">
+                  <svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M2 3h6l2 4h8V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3z"
+                    ></path>
+                  </svg>
+                  <span>41 Chapters</span>
+                </div>
+                <div class="course-price">₹899</div>
+              </div>
+              <button class="btn btn-primary">See Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+      <div class="container">
+        <!-- Footer Links -->
+        <div class="footer-content">
+          <div class="footer-column">
+            <div class="footer-logo">
+              <div class="logo-icon">
+                <span>P</span>
+              </div>
+              <span class="logo-text">Prepx</span>
+            </div>
+            <p class="footer-description">
+              The most trusted online examination platform for educational
+              institutions worldwide.
+            </p>
+            <div class="social-links">
+              <a
+                href="#"
+                class="social-link"
+                aria-label="Visit our Facebook"
+                rel="nofollow noopener"
+                >f</a
+              >
+              <a
+                href="#"
+                class="social-link"
+                aria-label="Visit our Twitter"
+                rel="nofollow noopener"
+                >t</a
+              >
+              <a
+                href="#"
+                class="social-link"
+                aria-label="Visit our LinkedIn"
+                rel="nofollow noopener"
+                >in</a
+              >
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h3>Product</h3>
+            <ul>
+              <li><a href="module.html">Modules</a></li>
+              <li><a href="../about us/aboutus.html">About Us</a></li>
+              <li><a href="#security">Security</a></li>
+              <li><a href="#integrations">Integrations</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Solutions</h3>
+            <ul>
+              <li><a href="#">Schools</a></li>
+              <li><a href="#">Universities</a></li>
+              <li><a href="#">Corporate Training</a></li>
+              <li><a href="#">Certification</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="../about us/aboutus.html">About Us</a></li>
+              <li><a href="../contactus/contact.html">Contact Us</a></li>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Documentation</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+          <p>&copy; 2025 Prepx. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="../login/login.html">Log In</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 10l7-7m0 0l7 7m-7-7v18"
+        />
+      </svg>
+    </button>
+
+    <!-- Course Detail Modal -->
+    <div id="courseModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modalTitle"></h2>
+          <button id="closeModal" class="close-btn">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-course-info">
+            <div class="modal-course-meta">
+              <span id="modalChapters"></span>
+              <span id="modalPrice"></span>
+              <span id="modalCategory"></span>
+            </div>
+            <p id="modalDescription"></p>
+            <div class="modal-features">
+              <h3>What you'll learn:</h3>
+              <ul id="modalFeatures"></ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="addToFavorites" class="btn btn-ghost">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+              />
+            </svg>
+            Add to Favorites
+          </button>
+          <button id="enrollCourse" class="btn btn-primary">Enroll Now</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="module.js"></script>
+  </body>
+</html>

@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrepX - Online Exam Platform</title>
+    <meta name="description" content="Secure online examination platform for Computer Science assessments">
+    <link rel="stylesheet" href="exam-page.css">
+</head>
+<body>
+    <!-- Exam Header -->
+    <header class="exam-header">
+        <div class="header-container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <span class="logo-text">P</span>
+                </div>
+                <div class="header-info">
+                    <h1 class="platform-title">PrepX</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <div class="content-grid">
+            <!-- Exam Instructions Section -->
+            <div class="instructions-section">
+                <div class="instructions-card">
+                    <header class="instructions-header">
+                        <h2 class="instructions-title">Exam Instructions</h2>
+                    </header>
+
+                    <div class="instructions-content">
+                        <section class="instruction-section">
+                            <h3 class="section-title">General Guidelines</h3>
+                            <ul class="instruction-list">
+                                <li>Read all questions carefully before answering</li>
+                                <li>Manage your time effectively across all sections</li>
+                                <li>Ensure stable internet connection throughout the exam</li>
+                                <li>Do not refresh the browser during the exam</li>
+                            </ul>
+                        </section>
+
+                        <section class="instruction-section">
+                            <h3 class="section-title">Technical Requirements</h3>
+                            <ul class="instruction-list">
+                                <li>Use a desktop or laptop computer (mobile devices not recommended)</li>
+                                <li>Enable JavaScript and disable pop-up blockers</li>
+                                <li>Close all unnecessary browser tabs and applications</li>
+                                <li>Ensure your device is fully charged or plugged in</li>
+                            </ul>
+                        </section>
+
+                        <section class="instruction-section">
+                            <h3 class="section-title">Exam Rules</h3>
+                            <ul class="instruction-list">
+                                <li>No external resources or materials allowed</li>
+                                <li>No communication with others during the exam</li>
+                                <li>Camera and microphone monitoring may be active</li>
+                                <li>Any suspicious activity will be flagged for review</li>
+                            </ul>
+                        </section>
+
+                        <div class="important-notice">
+                            <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m21 16-4 4-4-4"/>
+                                <path d="M17 20V4"/>
+                                <path d="m13 8-4-4-4 4"/>
+                                <path d="M7 4v16"/>
+                            </svg>
+                            <div>
+                                <h3 class="notice-title">Important</h3>
+                                <p class="notice-text">Once you begin the exam, the timer will start and cannot be paused. Make sure you are ready before clicking "Begin Exam".</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Student Form Section -->
+            <div class="form-section">
+                <aside class="student-form-container">
+                    <header class="student-form-header">
+                        <h2>Student Information</h2>
+                    </header>
+                    
+                    <form class="student-form" id="studentForm">
+                        <div class="form-field">
+                            <label for="name" class="form-label">Name:</label>
+                            <input
+                                id="name"
+                                name="name"
+                                type="text"
+                                class="form-input"
+                                placeholder="Enter your full name"
+                                required
+                            />
+                        </div>
+
+                        <div class="form-field">
+                            <label for="rollNumber" class="form-label">Roll Number:</label>
+                            <input
+                                id="rollNumber"
+                                name="rollNumber"
+                                type="text"
+                                class="form-input"
+                                placeholder="Enter your roll number"
+                                required
+                            />
+                        </div>
+
+                        <div class="form-field">
+                            <label for="email" class="form-label">Email ID:</label>
+                            <input
+                                id="email"
+                                name="email"
+                                type="email"
+                                class="form-input"
+                                placeholder="Enter your @chitkara.edu.in email"
+                                pattern="[a-zA-Z0-9._%+-]+@chitkara\.edu\.in$"
+                                title="Please enter a valid @chitkara.edu.in email address"
+                                required
+                            />
+                        </div>
+
+                        <div class="form-field">
+                            <label class="form-label">Group Selection:</label>
+                            <div class="group-selection">
+                                <label class="group-item">
+                                    <input type="checkbox" name="group" value="G1" class="group-checkbox" />
+                                    <span class="group-label">G1</span>
+                                </label>
+                                <label class="group-item">
+                                    <input type="checkbox" name="group" value="G2" class="group-checkbox" />
+                                    <span class="group-label">G2</span>
+                                </label>
+                                <label class="group-item">
+                                    <input type="checkbox" name="group" value="G3" class="group-checkbox" />
+                                    <span class="group-label">G3</span>
+                                </label>
+                                <label class="group-item">
+                                    <input type="checkbox" name="group" value="G4" class="group-checkbox" />
+                                    <span class="group-label">G4</span>
+                                </label>
+                                <label class="group-item">
+                                    <input type="checkbox" name="group" value="G5" class="group-checkbox" />
+                                    <span class="group-label">G5</span>
+                                </label>
+                                <label class="group-item">
+                                    <input type="checkbox" name="group" value="G6" class="group-checkbox" />
+                                    <span class="group-label">G6</span>
+                                </label>
+                                <label class="group-item">
+                                    <input type="checkbox" name="group" value="G7" class="group-checkbox" />
+                                    <span class="group-label">G7</span>
+                                </label>
+                                <label class="group-item">
+                                    <input type="checkbox" name="group" value="G8" class="group-checkbox" />
+                                    <span class="group-label">G8</span>
+                                </label>
+                                <label class="group-item">
+                                    <input type="checkbox" name="group" value="G9" class="group-checkbox" />
+                                    <span class="group-label">G9</span>
+                                </label>
+                                <label class="group-item">
+                                    <input type="checkbox" name="group" value="G10" class="group-checkbox" />
+                                    <span class="group-label">G10</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit-button">
+                            Begin Exam
+                        </button>
+                    </form>
+                </aside>
+            </div>
+        </div>
+    </main>
+<script src="exam.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrepX - The Future of Online Testing</title>
+    <meta
+      name="description"
+      content="Create, manage, and analyze secure online examinations with our cutting-edge platform. Empower your students with seamless testing experiences."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a href="#mainContent" class="skip-link">Skip to content</a>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <!-- Logo -->
+          <div class="logo">
+            <a href="index.html" class="logo-link">
+              <div class="logo-icon">
+                <span>P</span>
+              </div>
+              <span class="logo-text">Prepx</span>
+            </a>
+          </div>
+
+          <!-- Navigation -->
+          <nav class="nav" id="primaryNav">
+            <a href="../modules/module.html" class="nav-item">Modules</a>
+            <a href="#solutions" class="nav-item">Solutions</a>
+            <a href="../exam page/exam-page.html" class="nav-item">Resources</a>
+            <a href="../about us/aboutus.html" class="nav-item">About Us</a>
+          </nav>
+
+          <!-- Auth Buttons -->
+          <div class="header-buttons">
+            <div class="student-access">
+              <span>Student Access</span>
+              <button class="access-btn">
+                <svg
+                  width="16"
+                  height="16"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="auth-buttons">
+              <a href="../login/login.html" class="btn btn-ghost">Log In</a>
+              <button class="btn btn-cta" id="getStartedBtn">
+                Get Started
+              </button>
+            </div>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            class="mobile-menu-btn"
+            id="mobileMenuBtn"
+            aria-expanded="false"
+            aria-controls="primaryNav"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="mainContent">
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-bg">
+          <div class="hero-gradient-1"></div>
+          <div class="hero-gradient-2"></div>
+          <div class="hero-geometric"></div>
+        </div>
+
+        <div class="container">
+          <div class="hero-content">
+            <!-- Left Content -->
+            <div class="hero-left">
+              <div class="hero-badge">🚀 Trusted by 1000+ users worldwide</div>
+
+              <h1 class="hero-title">
+                The Future of
+                <br />
+                <span class="gradient-text">Online Testing</span>
+              </h1>
+
+              <p class="hero-description">
+                Create, manage, and analyze secure online examinations with our
+                cutting-edge platform. Empower your students with seamless
+                testing experiences.
+              </p>
+
+              <!-- CTA Buttons -->
+              <div class="hero-cta">
+                <a href="../login/login.html" class="btn btn-cta btn-lg">
+                  <span>Start Your Free Trial</span>
+                  <svg
+                    width="20"
+                    height="20"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    />
+                  </svg>
+                </a>
+                <a href="#aboutus" class="btn btn-hero btn-lg">
+                  <svg
+                    width="20"
+                    height="20"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  Watch Demo
+                </a>
+              </div>
+
+              <!-- Highlights -->
+              <div
+                class="hero-highlights"
+                role="list"
+                aria-label="Key highlights"
+              >
+                <div class="highlight" role="listitem">
+                  <span class="highlight-value">1k+</span>
+                  <span class="highlight-label">Learners</span>
+                </div>
+                <div class="highlight" role="listitem">
+                  <span class="highlight-value">99.9%</span>
+                  <span class="highlight-label">Uptime</span>
+                </div>
+                <div class="highlight" role="listitem">
+                  <span class="highlight-value">24/7</span>
+                  <span class="highlight-label">Support</span>
+                </div>
+              </div>
+            </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Log In/Login Modal -->
+    <div id="authModal" class="auth-modal" aria-hidden="true">
+      <div class="auth-modal-overlay" id="authModalOverlay"></div>
+ 
+      <div
+        class="auth-modal-content"
+        role="dialog"
+        aria-labelledby="authModalTitle"
+        aria-modal="true"
+      >
+        <button
+          class="auth-modal-close"
+          id="authModalClose"
+          aria-label="Close modal"
+        >
+          <svg
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+
+        <div class="auth-container-modal">
+          <div class="brand-modal">
+            <div class="logo-icon"><span>P</span></div>
+            <span class="logo-text">Prepx</span>
+          </div>
+
+          <!-- Log In Form -->
+          <section
+            class="auth-card-modal active"
+            id="signinCardModal"
+            aria-labelledby="signinTitleModal"
+          >
+            <header class="auth-header-modal">
+              <div class="auth-tabs-modal">
+                <button class="auth-tab-modal active" data-tab="signin">
+                  Log In
+                </button>
+                <button class="auth-tab-modal" data-tab="signup">
+                  Sign Up
+                </button>
+              </div>
+              <h1 id="signinTitleModal">Welcome back</h1>
+              <p class="subtitle-modal">Log in to continue to your dashboard</p>
+            </header>
+
+            <div
+              class="social-buttons-modal"
+              aria-label="Log in with social account"
+            >
+              <button
+                class="btn btn-social-modal google"
+                data-provider="google"
+                aria-label="Google"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M21.35 11.1H12v2.9h5.35c-.25 1.5-1.7 4.3-5.35 4.3-3.2 0-5.8-2.7-5.8-6s2.6-6 5.8-6c1.8 0 3 .8 3.7 1.5l2.5-2.4C16.8 3.5 14.6 2.5 12 2.5 6.9 2.5 2.8 6.6 2.8 11.7S6.9 20.9 12 20.9c6.6 0 9.2-4.6 9.2-8.1 0-.6-.06-1.02-.15-1.7z"
+                  ></path>
+                </svg>
+                Google
+              </button>
+              <button
+                class="btn btn-social-modal microsoft"
+                data-provider="microsoft"
+                aria-label="Microsoft"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"
+                  ></path>
+                </svg>
+                Microsoft
+              </button>
+              <button
+                class="btn btn-social-modal github"
+                data-provider="github"
+                aria-label="GitHub"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 .5a12 12 0 00-3.79 23.4c.6.1.82-.26.82-.58v-2.2c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.35-1.78-1.35-1.78-1.1-.77.08-.75.08-.75 1.2.08 1.84 1.25 1.84 1.25 1.07 1.84 2.82 1.31 3.5 1 .1-.8.42-1.32.76-1.62-2.67-.31-5.47-1.36-5.47-6.06 0-1.34.47-2.44 1.25-3.3-.13-.31-.54-1.57.12-3.27 0 0 1.01-.32 3.3 1.25a11.3 11.3 0 016 0c2.3-1.57 3.3-1.25 3.3-1.25.66 1.7.25 2.96.12 3.27.78.86 1.25 1.96 1.25 3.3 0 4.7-2.8 5.75-5.48 6.06.43.37.81 1.1.81 2.24v3.32c0 .32.22.68.82.58A12 12 0 0012 .5z"
+                  ></path>
+                </svg>
+                GitHub
+              </button>
+            </div>
+
+            <div class="divider-modal" role="separator" aria-label="or">
+              <span>or log in with email</span>
+            </div>
+
+            <form id="emailFormModal" class="auth-form-modal" autocomplete="on">
+              <div class="form-field-modal">
+                <label for="emailModal">Email</label>
+                <input
+                  type="email"
+                  id="emailModal"
+                  name="email"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+              <div class="form-field-modal password-field-modal">
+                <label for="passwordModal">Password</label>
+                <div class="password-input-modal">
+                  <input
+                    type="password"
+                    id="passwordModal"
+                    name="password"
+                    autocomplete="current-password"
+                    required
+                  />
+                  <button
+                    type="button"
+                    class="toggle-password-modal"
+                    aria-label="Show password"
+                    aria-pressed="false"
+                  >
+                    Show
+                  </button>
+                </div>
+              </div>
+              <div class="form-meta-modal">
+                <label class="checkbox-modal">
+                  <input type="checkbox" id="rememberModal" name="remember" />
+                  <span>Remember me</span>
+                </label>
+                <a href="#" class="link-modal">Forgot password?</a>
+              </div>
+              <button type="submit" class="btn btn-primary-modal">
+                Log in
+              </button>
+            </form>
+
+            <p class="auth-footer-modal">
+              Don't have an account?
+              <a class="link-modal" href="#" data-action="switch-to-signup"
+                >Start your free trial</a
+              >
+            </p>
+          </section>
+
+          <!-- Sign Up Form -->
+          <section
+            class="auth-card-modal"
+            id="signupCardModal"
+            aria-labelledby="signupTitleModal"
+          >
+            <header class="auth-header-modal">
+              <div class="auth-tabs-modal">
+                <button class="auth-tab-modal" data-tab="signin">Log In</button>
+                <button class="auth-tab-modal active" data-tab="signup">
+                  Sign Up
+                </button>
+              </div>
+              <h1 id="signupTitleModal">Create your account</h1>
+              <p class="subtitle-modal">
+                Join Prepx and start creating exams today
+              </p>
+            </header>
+
+            <div
+              class="social-buttons-modal"
+              aria-label="Sign up with social account"
+            >
+              <button
+                class="btn btn-social-modal google"
+                data-provider="google"
+                aria-label="Google"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M21.35 11.1H12v2.9h5.35c-.25 1.5-1.7 4.3-5.35 4.3-3.2 0-5.8-2.7-5.8-6s2.6-6 5.8-6c1.8 0 3 .8 3.7 1.5l2.5-2.4C16.8 3.5 14.6 2.5 12 2.5 6.9 2.5 2.8 6.6 2.8 11.7S6.9 20.9 12 20.9c6.6 0 9.2-4.6 9.2-8.1 0-.6-.06-1.02-.15-1.7z"
+                  ></path>
+                </svg>
+                Google
+              </button>
+              <button
+                class="btn btn-social-modal microsoft"
+                data-provider="microsoft"
+                aria-label="Microsoft"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"
+                  ></path>
+                </svg>
+                Microsoft
+              </button>
+              <button
+                class="btn btn-social-modal github"
+                data-provider="github"
+                aria-label="GitHub"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 .5a12 12 0 00-3.79 23.4c.6.1.82-.26.82-.58v-2.2c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.35-1.78-1.35-1.78-1.1-.77.08-.75.08-.75 1.2.08 1.84 1.25 1.84 1.25 1.07 1.84 2.82 1.31 3.5 1 .1-.8.42-1.32.76-1.62-2.67-.31-5.47-1.36-5.47-6.06 0-1.34.47-2.44 1.25-3.3-.13-.31-.54-1.57.12-3.27 0 0 1.01-.32 3.3 1.25a11.3 11.3 0 016 0c2.3-1.57 3.3-1.25 3.3-1.25.66 1.7.25 2.96.12 3.27.78.86 1.25 1.96 1.25 3.3 0 4.7-2.8 5.75-5.48 6.06.43.37.81 1.1.81 2.24v3.32c0 .32.22.68.82.58A12 12 0 0012 .5z"
+                  ></path>
+                </svg>
+                GitHub
+              </button>
+            </div>
+
+            <div class="divider-modal" role="separator" aria-label="or">
+              <span>or sign up with email</span>
+            </div>
+
+            <form
+              id="signupFormModal"
+              class="auth-form-modal"
+              autocomplete="on"
+            >
+              <div class="form-field-modal">
+                <label for="signupNameModal">Full Name</label>
+                <input
+                  type="text"
+                  id="signupNameModal"
+                  name="name"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+              <div class="form-field-modal">
+                <label for="signupEmailModal">Email</label>
+                <input
+                  type="email"
+                  id="signupEmailModal"
+                  name="email"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+              <div class="form-field-modal password-field-modal">
+                <label for="signupPasswordModal">Password</label>
+                <div class="password-input-modal">
+                  <input
+                    type="password"
+                    id="signupPasswordModal"
+                    name="password"
+                    autocomplete="new-password"
+                    required
+                  />
+                  <button
+                    type="button"
+                    class="toggle-password-modal"
+                    aria-label="Show password"
+                    aria-pressed="false"
+                  >
+                    Show
+                  </button>
+                </div>
+              </div>
+              <div class="form-field-modal">
+                <label for="signupConfirmPasswordModal">Confirm Password</label>
+                <div class="password-input-modal">
+                  <input
+                    type="password"
+                    id="signupConfirmPasswordModal"
+                    name="confirmPassword"
+                    autocomplete="new-password"
+                    required
+                  />
+                  <button
+                    type="button"
+                    class="toggle-password-modal"
+                    aria-label="Show password"
+                    aria-pressed="false"
+                  >
+                    Show
+                  </button>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary-modal">
+                Create Account
+              </button>
+            </form>
+
+            <p class="auth-footer-modal">
+              Already have an account?
+              <a class="link-modal" href="#" data-action="switch-to-signin"
+                >Log in here</a
+              >
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+      <div class="features-bg"></div>
+      <div class="container">
+        <div class="features-header">
+          <div class="section-badge">⚡ Powerful Features</div>
+          <h2 class="section-title">
+            Everything you need for
+            <br />
+            <span class="gradient-text">modern examinations</span>
+          </h2>
+          <p class="section-description">
+            From intelligent question creation to advanced analytics, our
+            comprehensive platform delivers enterprise-grade testing solutions
+            with unmatched simplicity.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <div class="feature-icon">
+                <svg
+                  width="32"
+                  height="32"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m5-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <div class="feature-glow"></div>
+            </div>
+            <h3 class="feature-title">Secure & Reliable</h3>
+            <p class="feature-description">
+              Advanced proctoring and anti-cheating measures ensure exam
+              integrity with industry-leading security protocols.
+            </p>
+            <div class="feature-accent"></div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <div class="feature-icon">
+                <svg
+                  width="32"
+                  height="32"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                  />
+                </svg>
+              </div>
+              <div class="feature-glow"></div>
+            </div>
+            <h3 class="feature-title">Easy Administration</h3>
+            <p class="feature-description">
+              Intuitive dashboard for creating, managing, and monitoring exams
+              with bulk student management capabilities.
+            </p>
+            <div class="feature-accent"></div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <div class="feature-icon">
+                <svg
+                  width="32"
+                  height="32"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                  />
+                </svg>
+              </div>
+              <div class="feature-glow"></div>
+            </div>
+            <h3 class="feature-title">Detailed Analytics</h3>
+            <p class="feature-description">
+              Comprehensive reporting and analytics to track performance,
+              identify trends, and improve learning outcomes.
+            </p>
+            <div class="feature-accent"></div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <div class="feature-icon">
+                <svg
+                  width="32"
+                  height="32"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <div class="feature-glow"></div>
+            </div>
+            <h3 class="feature-title">Flexible Scheduling</h3>
+            <p class="feature-description">
+              Schedule exams with custom time limits, multiple attempts, and
+              automated grading for efficient workflow.
+            </p>
+            <div class="feature-accent"></div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <div class="feature-icon">
+                <svg
+                  width="32"
+                  height="32"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <div class="feature-glow"></div>
+            </div>
+            <h3 class="feature-title">Instant Results</h3>
+            <p class="feature-description">
+              Automated grading with immediate feedback and detailed
+              explanations to enhance student learning experience.
+            </p>
+            <div class="feature-accent"></div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <div class="feature-icon">
+                <svg
+                  width="32"
+                  height="32"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                  />
+                </svg>
+              </div>
+              <div class="feature-glow"></div>
+            </div>
+            <h3 class="feature-title">Global Accessibility</h3>
+            <p class="feature-description">
+              Multi-language support and mobile-responsive design ensuring
+              accessibility for students worldwide.
+            </p>
+            <div class="feature-accent"></div>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="features-cta">
+          <div class="cta-card">
+            <h3>Ready to transform your testing process?</h3>
+            <p>
+              Join thousands of educators who trust Prepx for their online
+              examinations.
+            </p>
+            <a href="../login/login.html" class="btn btn-cta btn-lg">
+              Get Started Today
+              <svg
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+      <div class="container">
+        <!-- Footer Links -->
+        <div class="footer-content">
+          <div class="footer-column">
+            <div class="footer-logo">
+              <div class="logo-icon">
+                <span>P</span>
+              </div>
+              <span class="logo-text">Prepx</span>
+            </div>
+            <p class="footer-description">
+              The most trusted online examination platform for educational
+              institutions worldwide.
+            </p>
+            <div class="social-links">
+              <a
+                href="#"
+                class="social-link"
+                aria-label="Visit our Facebook"
+                rel="nofollow noopener"
+                >f</a
+              >
+              <a
+                href="#"
+                class="social-link"
+                aria-label="Visit our Twitter"
+                rel="nofollow noopener"
+                >t</a
+              >
+              <a
+                href="#"
+                class="social-link"
+                aria-label="Visit our LinkedIn"
+                rel="nofollow noopener"
+                >in</a
+              >
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h3>Product</h3>
+            <ul>
+              <li><a href="#features">Features</a></li>
+              <li><a href="../about us/aboutus.html">About Us</a></li>
+              <li><a href="#security">Security</a></li>
+              <li><a href="#integrations">Integrations</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Solutions</h3>
+            <ul>
+              <li><a href="#">Schools</a></li>
+              <li><a href="#">Universities</a></li>
+              <li><a href="#">Corporate Training</a></li>
+              <li><a href="#">Certification</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="../about us/aboutus.html">About Us</a></li>
+              <li><a href="../contactus/contact.html">Contact Us</a></li>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Documentation</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+          <p>&copy; 2025 Prepx. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="../login/login.html">Log In</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+      <svg
+        width="20"
+        height="20"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 10l7-7m0 0l7 7m-7-7v18"
+        ></path>
+      </svg>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
