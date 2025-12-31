@@ -48,7 +48,7 @@ def make_commit(date, repo_path, filename):
 
     # Only a comment is added
     with open(filepath, "a") as f:
-        f.write("# issue fixed\n")
+        f.write("<!-- This is a single-line comment -->\n")
 
     subprocess.run(["git", "add", filename], cwd=repo_path)
 
@@ -74,8 +74,8 @@ def main():
     filename = get_filename("Enter the filename to modify", "data.py")
 
     # 🔒 UPDATED DATE RANGE (1 Sept 2025 → 1 Oct 2025)
-    start_date = datetime(2025, 9, 1, 0, 0, 0)
-    end_date   = datetime(2025, 10, 1, 23, 59, 59)
+    start_date = datetime(2025, 9, 11, 0, 0, 0)
+    end_date   = datetime(2025, 9, 25, 23, 59, 59)
 
     print(f"\nMaking {num_commits} commits")
     print(f"Date range : {start_date} → {end_date}")
